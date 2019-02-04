@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_InsertRouteSheet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRouteSheet" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertRouteSheet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRouteSheetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateRouteSheet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRouteSheet" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateRouteSheet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRouteSheetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteRouteSheet_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRouteSheet" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteRouteSheet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRouteSheetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_LoadRouteSheetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRouteSheetList" />
+  </wsdl:message>
+  <wsdl:message name="IService_LoadRouteSheetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRouteSheetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertRouteMark_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRouteMark" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertRouteMark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRouteMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateRouteMark_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRouteMark" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateRouteMark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRouteMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteRouteMark_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRouteMark" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteRouteMark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRouteMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_LoadRouteMarkList_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRouteMarkList" />
+  </wsdl:message>
+  <wsdl:message name="IService_LoadRouteMarkList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRouteMarkListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertRoutePoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoutePoint" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertRoutePoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRoutePointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateRoutePoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoutePoint" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateRoutePoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoutePointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteRoutePoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoutePoint" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteRoutePoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoutePointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_LoadRoutePointList_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRoutePointList" />
+  </wsdl:message>
+  <wsdl:message name="IService_LoadRoutePointList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRoutePointListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="InsertRouteSheet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertRouteSheet" message="tns:IService_InsertRouteSheet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertRouteSheetResponse" message="tns:IService_InsertRouteSheet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRouteSheet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateRouteSheet" message="tns:IService_UpdateRouteSheet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateRouteSheetResponse" message="tns:IService_UpdateRouteSheet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRouteSheet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteRouteSheet" message="tns:IService_DeleteRouteSheet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteRouteSheetResponse" message="tns:IService_DeleteRouteSheet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRouteSheetList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/LoadRouteSheetList" message="tns:IService_LoadRouteSheetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LoadRouteSheetListResponse" message="tns:IService_LoadRouteSheetList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRouteMark">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertRouteMark" message="tns:IService_InsertRouteMark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertRouteMarkResponse" message="tns:IService_InsertRouteMark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRouteMark">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateRouteMark" message="tns:IService_UpdateRouteMark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateRouteMarkResponse" message="tns:IService_UpdateRouteMark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRouteMark">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteRouteMark" message="tns:IService_DeleteRouteMark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteRouteMarkResponse" message="tns:IService_DeleteRouteMark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRouteMarkList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/LoadRouteMarkList" message="tns:IService_LoadRouteMarkList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LoadRouteMarkListResponse" message="tns:IService_LoadRouteMarkList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRoutePoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertRoutePoint" message="tns:IService_InsertRoutePoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertRoutePointResponse" message="tns:IService_InsertRoutePoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoutePoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateRoutePoint" message="tns:IService_UpdateRoutePoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateRoutePointResponse" message="tns:IService_UpdateRoutePoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoutePoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteRoutePoint" message="tns:IService_DeleteRoutePoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteRoutePointResponse" message="tns:IService_DeleteRoutePoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoutePointList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/LoadRoutePointList" message="tns:IService_LoadRoutePointList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LoadRoutePointListResponse" message="tns:IService_LoadRoutePointList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertRouteSheet">
+      <soap:operation soapAction="http://tempuri.org/IService/InsertRouteSheet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRouteSheet">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateRouteSheet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRouteSheet">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteRouteSheet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRouteSheetList">
+      <soap:operation soapAction="http://tempuri.org/IService/LoadRouteSheetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRouteMark">
+      <soap:operation soapAction="http://tempuri.org/IService/InsertRouteMark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRouteMark">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateRouteMark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRouteMark">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteRouteMark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRouteMarkList">
+      <soap:operation soapAction="http://tempuri.org/IService/LoadRouteMarkList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRoutePoint">
+      <soap:operation soapAction="http://tempuri.org/IService/InsertRoutePoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoutePoint">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateRoutePoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoutePoint">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteRoutePoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRoutePointList">
+      <soap:operation soapAction="http://tempuri.org/IService/LoadRoutePointList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost:8034/Service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
