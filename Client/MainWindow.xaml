@@ -5,13 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Barcode Tracking System" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Text="{Binding Name}"></TextBox>
-        <Button Grid.Row="1" Content="Добавить" Name="btnAddRoutePoint" Click="BtnAddRoutePoint_Click"></Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="6">
+            <GroupBox Header="Маршрутные листы" Margin="2">
+                
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="3">
+            <GroupBox Header="Отметки о перемещнии МЛ" Margin="2">
+
+            </GroupBox>
+        </Grid>
+
+        <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="6" Width="3" HorizontalAlignment="Stretch"/>
+        <GridSplitter Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Height="3" HorizontalAlignment="Stretch"/>
+
+        <Grid Grid.Row="4" Grid.Column="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <GroupBox Header="Изменить" Margin="2">
+
+                </GroupBox>
+            </Grid>
+            <Grid Grid.Row="1">
+                <GroupBox Header="Добавить" Margin="2">
+                    <Grid>
+                        <TextBox Grid.Row="0" Text="{Binding Name}"></TextBox>
+                        <Button Grid.Row="1" Content="Добавить" Name="btnAddRoutePoint" Click="BtnAddRoutePoint_Click"></Button>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
